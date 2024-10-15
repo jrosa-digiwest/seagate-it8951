@@ -821,7 +821,7 @@ int it8951_sg_open(struct it8951_data **data, const char *devname)
 		return ENOMEM;
 	}
 
-	err = open(devname, O_RDWR);
+	err = open(devname, O_RDWR | O_NONBLOCK);
 	if (err == -1) {
 		err = errno;
 		err("Failed to open ITE device [%s]: %s\n",
