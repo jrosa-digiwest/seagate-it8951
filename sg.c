@@ -115,7 +115,7 @@ static int it8951_sg_get_sys(struct it8951_data *data)
 
 	dev = calloc(1, sizeof(*dev));
 	if (!dev) {
-		fprintf(stderr, "Failed to calloc %ld bytes: %s\n",
+		fprintf(stderr, "Failed to calloc %zu bytes: %s\n",
 			sizeof(*dev), strerror(errno));
 		return ENOMEM;
 	}
